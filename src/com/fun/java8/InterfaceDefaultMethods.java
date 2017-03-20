@@ -1,9 +1,13 @@
 package com.fun.java8;
 
-public class InterfaceMethods implements interface1, interface2{
+public class InterfaceDefaultMethods implements interface1, interface2{
+
+	public void printMessage(String msg){
+		System.out.println("InterfaceMethods.printMessage()" + msg);
+	}
 
 	public static void main(String[] args) {
-		InterfaceMethods obj = new InterfaceMethods();
+		InterfaceDefaultMethods obj = new InterfaceDefaultMethods();
 		obj.printMessage(" message content");
 	}
 
@@ -16,7 +20,7 @@ interface interface1 {
 }
 
 interface interface2 {
-	static void printMessage(String msg){
+	default void printMessage(String msg){
 		System.out.println("interface2.printMessage(): " + msg);
 	}
 }
