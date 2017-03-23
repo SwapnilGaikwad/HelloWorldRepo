@@ -13,12 +13,21 @@ public class Streams {
 		printList(sequentialStream);
 	}
 
+	public void testParallelStreams() {
+		Stream<Integer> parallelStream = list.parallelStream();
+		printList(parallelStream);
+	}
+
 	private void printList(Stream<Integer> stream){
 		stream.forEach(num -> System.out.print("'" + num + "' "));
+		System.out.println();
 	}
 
 	public static void main(String[] args) {
 		Streams obj = new Streams();
+		System.out.println("Testing sequential stream: ");
 		obj.testSequentialStreams();
+		System.out.println("Testing parallel stream: ");
+		obj.testParallelStreams();
 	}
 }
