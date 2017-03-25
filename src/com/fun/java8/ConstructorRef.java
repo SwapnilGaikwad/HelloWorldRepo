@@ -11,9 +11,15 @@ public class ConstructorRef {
 	public void testConstructorRef(){
 		Converter<String, Integer> converter = Integer::valueOf;
 		Integer value = converter.convert("1234");
-		System.out.println("Answer : " + value);
+		System.out.println("Conversion answer : " + value);
+		converter = ConstructorRef::length;
+		value = converter.convert("1234");
+		System.out.println("Length answer : " + value);
 	}
 
+	private static int length(String input){
+		return input.length();
+	}
 	public static void main(String[] args) {
 		new ConstructorRef().testConstructorRef();
 	}
