@@ -12,7 +12,6 @@ public class Base64Encoding {
 			byte [] origStr = Base64.getDecoder().decode(base64Encoding);
 			System.out.println("Decoded string: " + new String(origStr, "utf-8"));
 		} catch (UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
