@@ -24,10 +24,10 @@ class SimpleAnnotation {
 	}
 }
 
-public class AnnotationProcesser {
+public class CustomAnnotation {
 	
 	public static void main(String[] args) throws SecurityException, ClassNotFoundException{
-		ClassLoader classLoader = AnnotationProcesser.class.getClassLoader();
+		ClassLoader classLoader = CustomAnnotation.class.getClassLoader();
 		for(Method method: classLoader.loadClass("com.fun.misc.SimpleAnnotation").getMethods()){
 			for(Annotation annotation : method.getDeclaredAnnotations()){
 				System.out.println("Annotation: " + annotation);
