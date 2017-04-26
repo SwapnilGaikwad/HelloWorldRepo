@@ -13,8 +13,11 @@ public class JavaJNI {
 
 	public native static void printHello();
 
+	public native static double add(double a, double b);
+
 	public static void main(String[] args) {
 		JavaJNI.printHello();
+		System.out.println("Answer: " + JavaJNI.add(10, 20));
 	}
 
 }

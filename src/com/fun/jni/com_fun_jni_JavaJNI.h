@@ -15,6 +15,14 @@ extern "C" {
 JNIEXPORT void JNICALL Java_com_fun_jni_JavaJNI_printHello
   (JNIEnv *, jclass);
 
+/*
+ * Class:     com_fun_jni_JavaJNI
+ * Method:    add
+ * Signature: (DD)D
+ */
+JNIEXPORT jdouble JNICALL Java_com_fun_jni_JavaJNI_add
+  (JNIEnv *, jclass, jdouble, jdouble);
+
 #ifdef __cplusplus
 }
 #endif
